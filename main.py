@@ -1,7 +1,7 @@
 import random
 
 def generar_tablero():
-    tablero = [[0 for _ in range(9)] for _ in range(9)]
+    tablero = []
     resolver_tablero(tablero)
     vaciar_casillas(tablero)
     return tablero
