@@ -1,7 +1,7 @@
 import random
 
 def generar_tablero():
-    tablero = []
+    tablero = [[0 for _ in range(9)] for _ in range(9)]
     resolver_tablero(tablero)
     vaciar_casillas(tablero)
     return tablero
@@ -86,9 +86,10 @@ def main():
             print("\nSudoku resuelto:")
             imprimir_tablero(tablero)
             print("¡Hasta luego!")
-        
-        else:
-            print("Respuesta inválida. Por favor, responde 'si' o 'no'.")
+        if respuesta.lower() == "no":
+            print("¡Entendido!")
+            continue
 
+        break
 if __name__ == "__main__":
     main()
